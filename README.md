@@ -1,14 +1,30 @@
-# CardioGuard-AI
-Heart Disease Prediction Using Machine Learning
-## Model Training and Evaluation Results
+# CardioGuard-AI – Heart Disease Prediction Using Machine Learning
 
-Five machine learning classification algorithms were trained and evaluated for the CardioGuard-AI heart disease prediction project.
+## 1. Project Overview
+CardioGuard-AI is a machine learning-based application designed to predict the possibility of heart disease using patient health information. It uses multiple machine learning algorithms and compares their performance to identify the best-performing model.
 
-The dataset was divided into 80% training data and 20% testing data using stratified sampling. The models were evaluated using Accuracy, Precision, Recall, F1-score and ROC-AUC.
+## 2. Algorithms Used
+This project uses five machine learning algorithms:
 
-### Performance Comparison
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+4. Support Vector Machine (SVM)
+5. K-Nearest Neighbors (KNN)
 
-| Algorithm | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+## 3. Dataset and Preprocessing
+The dataset is stored at `data/raw/heart_disease.csv`.
+
+Preprocessing techniques include:
+- Handling missing numerical values using median imputation.
+- Handling missing categorical values using most-frequent imputation.
+- Scaling numerical features using StandardScaler.
+- Encoding categorical features using OneHotEncoder.
+- Converting the original target into a binary classification target.
+
+## 4. Model Evaluation Results
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
 |---|---:|---:|---:|---:|---:|
 | Logistic Regression | 88.52% | 83.87% | 92.86% | 88.14% | 96.65% |
 | SVM | 88.52% | 83.87% | 92.86% | 88.14% | 96.43% |
@@ -16,14 +32,72 @@ The dataset was divided into 80% training data and 20% testing data using strati
 | Random Forest | 86.89% | 83.33% | 89.29% | 86.21% | 94.48% |
 | Decision Tree | 78.69% | 74.19% | 82.14% | 77.97% | 85.98% |
 
-### Best Model
+**Best-performing model:** Logistic Regression, with a ROC-AUC score of 96.65%.
 
-Logistic Regression achieved the highest ROC-AUC score of 96.65% among the five evaluated algorithms. Therefore, it was selected as the best-performing model based on ROC-AUC.
+The models were evaluated using an 80:20 stratified train-test split.
 
-### Discussion
+## 5. Technologies Used
+- Python
+- Streamlit
+- Pandas
+- Scikit-learn
+- Joblib
 
-The results indicate that Logistic Regression and SVM achieved the highest accuracy of 88.52%. Logistic Regression obtained the highest ROC-AUC of 96.65%, while KNN achieved the highest precision of 86.21%.
+## 6. Project Structure
 
-Decision Tree obtained the lowest performance across the reported metrics. These results show that different algorithms have different classification characteristics.
+```text
+CardioGuard-AI/
+│
+├── app.py
+├── src/
+├── data/
+│   └── raw/
+│       └── heart_disease.csv
+├── models/
+├── notebooks/
+├── pages/
+├── assets/
+├── reports/
+├── screenshots/
+└── requirements.txt
+```
 
-The evaluation results are based on the project's 80:20 train-test split with random state 42. They represent model performance on the selected test dataset and do not guarantee the same performance on new data.
+## 7. Installation and Execution
+
+**Step 1: Clone the repository**
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+**Step 2: Open the project folder**
+
+```bash
+cd CardioGuard-AI
+```
+
+**Step 3: Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Step 4: Run the Streamlit application**
+
+```bash
+streamlit run app.py
+```
+
+## 8. Application Screenshots
+
+Screenshots of the CardioGuard-AI application are available in the `screenshots/` folder.
+
+## 9. Deployment
+
+Live Application URL: Add your deployed Streamlit URL here.
+
+GitHub Repository: Add your GitHub repository URL here.
+
+## 10. Disclaimer
+
+This application is developed for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.
