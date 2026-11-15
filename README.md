@@ -94,7 +94,7 @@ Screenshots of the CardioGuard-AI application are available in the `screenshots/
 
 ## 9. Deployment
 
-Live Application URL: Add your deployed Streamlit URL here.
+Live Application URL: [Add your deployed Streamlit URL here.](https://cardioguard-ai-edjekgqpgsdnn4d9czbgx7.streamlit.app/)
 
 GitHub Repository: Add your GitHub repository URL here.
 
